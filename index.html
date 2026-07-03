@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chiroy Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+    <img src="images/banner.jpg"
+         class="hero-banner"
+         alt="Banner">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>💈 CHIROY STUDIO</h1>
+
+        <p>Premium Barbershop & Beauty Salon</p>
+
+        <span>Красота начинается здесь ✨</span>
+
+    </div>
+
+</div>
+
+<div class="menu">
+
+    <button onclick="showMen()">
+        👨 Мужской отдел
+    </button>
+
+    <button onclick="showWomen()">
+        👩 Женский отдел
+    </button>
+
+</div>
+
+
+<!-- Мужские мастера -->
+
+<div id="men" class="masters">
+
+    <h2>💈 Мужские мастера</h2>
+
+    <div class="masters-grid">
+
+        <div class="card">
+
+            <img src="photos/amir.jpg">
+
+            <h3>Amir</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Amir')">
+                Записаться
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="photos/jasur.jpg">
+
+            <h3>Jasur</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Jasur')">
+                Записаться
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="photos/sardor.jpg">
+
+            <h3>Sardor</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Sardor')">
+                Записаться
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="photos/timur.jpg">
+
+            <h3>Timur</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Timur')">
+                Записаться
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Женские мастера -->
+
+<div id="women" class="masters">
+
+    <h2>💇 Женские мастера</h2>
+
+    <div class="masters-grid">
+
+        <div class="card">
+
+            <img src="photos/alina.jpg">
+
+            <h3>Alina</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Alina')">
+                Записаться
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="photos/diana.jpg">
+
+            <h3>Diana</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Diana')">
+                Записаться
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="photos/madina.jpg">
+
+            <h3>Madina</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Madina')">
+                Записаться
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="photos/sabina.jpg">
+
+            <h3>Sabina</h3>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="bookMaster('Sabina')">
+                Записаться
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Telegram Mini App -->
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
