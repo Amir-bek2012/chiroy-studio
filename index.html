@@ -6,10 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+          
 
     <title>Chiroy Studio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 </head>
 
@@ -64,10 +67,9 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Amir')">
+            <button onclick="openBooking('Amir')">
                 Записаться
             </button>
-
         </div>
 
         <div class="card">
@@ -78,7 +80,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Jasur')">
+            <button onclick="openBooking('Jasur')">
                 Записаться
             </button>
 
@@ -92,7 +94,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Sardor')">
+            <button onclick="openBooking('Sardor')">
                 Записаться
             </button>
 
@@ -106,7 +108,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Timur')">
+            <button onclick="openBooking('Timur')">
                 Записаться
             </button>
 
@@ -133,7 +135,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Alina')">
+            <button onclick="openBooking('Alina')">
                 Записаться
             </button>
 
@@ -147,7 +149,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Diana')">
+            <button onclick="openBooking('Diana')">
                 Записаться
             </button>
 
@@ -161,7 +163,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Madina')">
+            <button onclick="openBooking('Madina')">
                 Записаться
             </button>
 
@@ -175,7 +177,7 @@
 
             <p>⭐⭐⭐⭐⭐</p>
 
-            <button onclick="bookMaster('Sabina')">
+            <button onclick="openBooking('Sabina')">
                 Записаться
             </button>
 
@@ -190,6 +192,44 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <script src="script.js"></script>
+
+<div id="bookingModal" class="modal">
+
+<div class="modal-box">
+
+<h2 id="masterName"></h2>
+
+<p>Выберите дату</p>
+
+<input type="date" id="date">
+
+<p>Выберите время</p>
+
+<select id="time">
+
+<option>10:00</option>
+<option>11:00</option>
+<option>12:00</option>
+<option>13:00</option>
+<option>14:00</option>
+<option>15:00</option>
+<option>16:00</option>
+<option>17:00</option>
+<option>18:00</option>
+
+</select>
+
+<button onclick="sendBooking()">
+Подтвердить запись
+</button>
+
+<button onclick="closeBooking()">
+Отмена
+</button>
+
+</div>
+
+</div>
 
 </body>
 

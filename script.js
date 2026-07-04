@@ -75,3 +75,33 @@ function closeApp(){
     tg.close();
 
 }
+
+
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+
+tg.expand();
+
+const user = tg.initDataUnsafe.user;
+
+if (user) {
+    console.log("Telegram User:");
+    console.log(user);
+
+    console.log("ID:", user.id);
+    console.log("Имя:", user.first_name);
+    console.log("Username:", user.username);
+}
+
+let selectedMaster = "";
+
+function openBooking(master){
+
+    selectedMaster = master;
+
+    document.getElementById("bookingModal").style.display="flex";
+
+    document.getElementById("masterName").innerText=master;
+
+}
