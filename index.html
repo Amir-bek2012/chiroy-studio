@@ -3,233 +3,312 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-          
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>Chiroy Studio</title>
+<title>Chiroy Studio</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 </head>
 
 <body>
 
-<div class="hero">
+<!-- HERO -->
 
-    <img src="images/banner.jpg"
-         class="hero-banner"
-         alt="Banner">
+<header class="hero">
 
-    <div class="overlay"></div>
+<img src="images/background.jpg" class="hero-bg">
 
-    <div class="hero-content">
+<div class="overlay"></div>
 
-        <h1>💈 CHIROY STUDIO</h1>
+<div class="hero-content">
 
-        <p>Premium Barbershop & Beauty Salon</p>
+<img src="images/logo.png" class="logo">
 
-        <span>Красота начинается здесь ✨</span>
+<h1>CHIROY STUDIO</h1>
 
-    </div>
+<p>Premium Beauty Salon</p>
 
 </div>
 
-<div class="menu">
+</header>
 
-    <button onclick="showMen()">
-        👨 Мужской отдел
-    </button>
+<!-- MENU -->
 
-    <button onclick="showWomen()">
-        👩 Женский отдел
-    </button>
+<section class="menu">
 
-</div>
+<button onclick="showMen()">
 
+👨 Мужской отдел
+
+</button>
+
+<button onclick="showWomen()">
+
+👩 Женский отдел
+
+</button>
+
+<button>
+
+📍 Адрес салона
+
+</button>
+
+<button>
+
+☎️ Администратор
+
+</button>
+
+<button>
+
+📅 Мои записи
+
+</button>
+
+<button>
+
+📖 История посещений
+
+</button>
+
+<button>
+
+📊 Статистика
+
+</button>
+
+<button>
+
+👤 Мой профиль
+
+</button>
+
+<button>
+
+🌍 Язык
+
+</button>
+
+</section>
 
 <!-- Мужские мастера -->
 
-<div id="men" class="masters">
+<section id="men" class="masters">
 
-    <h2>💈 Мужские мастера</h2>
+<h2>Мужские мастера</h2>
 
-    <div class="masters-grid">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
 
-            <img src="photos/amir.jpg">
+<img src="photos/amir.jpg">
 
-            <h3>Amir</h3>
+<h3>Amir</h3>
 
-            <p>⭐⭐⭐⭐⭐</p>
+<p>★★★★★</p>
 
-            <button onclick="openBooking('Amir')">
-                Записаться
-            </button>
-        </div>
+<button onclick="openBooking('Amir')">
 
-        <div class="card">
+Записаться
 
-            <img src="photos/jasur.jpg">
-
-            <h3>Jasur</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Jasur')">
-                Записаться
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <img src="photos/sardor.jpg">
-
-            <h3>Sardor</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Sardor')">
-                Записаться
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <img src="photos/timur.jpg">
-
-            <h3>Timur</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Timur')">
-                Записаться
-            </button>
-
-        </div>
-
-    </div>
+</button>
 
 </div>
 
+<div class="card">
 
-<!-- Женские мастера -->
+<img src="photos/jasur.jpg">
 
-<div id="women" class="masters">
+<h3>Jasur</h3>
 
-    <h2>💇 Женские мастера</h2>
+<p>★★★★★</p>
 
-    <div class="masters-grid">
+<button onclick="openBooking('Jasur')">
 
-        <div class="card">
+Записаться
 
-            <img src="photos/alina.jpg">
-
-            <h3>Alina</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Alina')">
-                Записаться
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <img src="photos/diana.jpg">
-
-            <h3>Diana</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Diana')">
-                Записаться
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <img src="photos/madina.jpg">
-
-            <h3>Madina</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Madina')">
-                Записаться
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <img src="photos/sabina.jpg">
-
-            <h3>Sabina</h3>
-
-            <p>⭐⭐⭐⭐⭐</p>
-
-            <button onclick="openBooking('Sabina')">
-                Записаться
-            </button>
-
-        </div>
-
-    </div>
+</button>
 
 </div>
 
-<!-- Telegram Mini App -->
+<div class="card">
 
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<img src="photos/sardor.jpg">
 
-<script src="script.js"></script>
+<h3>Sardor</h3>
 
-<div id="bookingModal" class="modal">
+<p>★★★★★</p>
+
+<button onclick="openBooking('Sardor')">
+
+Записаться
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="photos/timur.jpg">
+
+<h3>Timur</h3>
+
+<p>★★★★★</p>
+
+<button onclick="openBooking('Timur')">
+
+Записаться
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Женские -->
+
+<section id="women" class="masters">
+
+<h2>Женские мастера</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="photos/alina.jpg">
+
+<h3>Alina</h3>
+
+<p>★★★★★</p>
+
+<button onclick="openBooking('Alina')">
+
+Записаться
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="photos/diana.jpg">
+
+<h3>Diana</h3>
+
+<p>★★★★★</p>
+
+<button onclick="openBooking('Diana')">
+
+Записаться
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="photos/madina.jpg">
+
+<h3>Madina</h3>
+
+<p>★★★★★</p>
+
+<button onclick="openBooking('Madina')">
+
+Записаться
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="photos/sabina.jpg">
+
+<h3>Sabina</h3>
+
+<p>★★★★★</p>
+
+<button onclick="openBooking('Sabina')">
+
+Записаться
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Окно записи -->
+
+<div class="modal" id="bookingModal">
 
 <div class="modal-box">
 
 <h2 id="masterName"></h2>
 
-<p>Выберите дату</p>
+<label>Дата</label>
 
 <input type="date" id="date">
 
-<p>Выберите время</p>
+<label>Время</label>
 
 <select id="time">
 
+<option>09:00</option>
+
 <option>10:00</option>
+
 <option>11:00</option>
+
 <option>12:00</option>
+
 <option>13:00</option>
+
 <option>14:00</option>
+
 <option>15:00</option>
+
 <option>16:00</option>
+
 <option>17:00</option>
+
 <option>18:00</option>
+
+<option>19:00</option>
 
 </select>
 
-<button onclick="sendBooking()">
-Подтвердить запись
+<div class="buttons">
+
+<button onclick="confirmBooking()">
+
+✅ Подтвердить
+
 </button>
 
 <button onclick="closeBooking()">
-Отмена
+
+❌ Отмена
+
 </button>
 
 </div>
 
 </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 
