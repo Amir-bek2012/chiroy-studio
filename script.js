@@ -98,35 +98,33 @@ function closeBooking() {
 // Подтвердить запись
 // =========================
 
-function confirmBooking() {
+function bookMaster(master){
 
-    const date = document.getElementById("date").value;
+    const date=document.getElementById("date").value;
+    const time=document.getElementById("time").value;
 
-    const time = document.getElementById("time").value;
+    Telegram.WebApp.sendData(JSON.stringify({
 
-    if (date === "" || time === "") {
-
-        alert("Выберите дату и время");
-
-        return;
-
-    }
-
-    tg.sendData(JSON.stringify({
-
-        action: "booking",
-
-        master: selectedMaster,
-
-        date: date,
-
-        time: time
+        action:"booking",
+        master:master,
+        date:date,
+        time:time
 
     }));
 
-    alert("Запись отправлена!");
+    document.getElementById("successText").innerHTML=
+        "<b>Мастер:</b> "+master+
+        "<br><br><b>Дата:</b> "+date+
+        "<br><b>Время:</b> "+time+
+        "<br><br>Мы будем ждать вас ❤️";
 
-    closeBooking();
+    document.getElementById("successModal").style.display="flex";
+
+}
+
+function closeSuccess(){
+
+    document.getElementById("successModal").style.display="none";
 
 }
 
