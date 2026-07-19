@@ -250,64 +250,33 @@
 
 <!-- Окно записи -->
 
-<div class="modal" id="bookingModal">
+<div class="booking-screen" id="bookingModal">
 
-<div class="modal-box">
+    <div class="booking-box">
 
-<h2 id="masterName"></h2>
+        <h2 id="masterName">Мастер</h2>
 
-<label>Дата</label>
+        <h3>📅 Выберите день</h3>
 
-<input type="date" id="date">
+        <div id="days" class="days"></div>
 
-<label>Время</label>
+        <h3>🕒 Выберите время</h3>
 
-<select id="time">
+        <div id="times" class="times"></div>
 
-<option>09:00</option>
+        <button class="confirmBooking" onclick="confirmBooking()">
+            ✅ Подтвердить запись
+        </button>
 
-<option>10:00</option>
+        <button class="cancelBooking" onclick="closeBooking()">
+            ✖ Закрыть
+        </button>
 
-<option>11:00</option>
-
-<option>12:00</option>
-
-<option>13:00</option>
-
-<option>14:00</option>
-
-<option>15:00</option>
-
-<option>16:00</option>
-
-<option>17:00</option>
-
-<option>18:00</option>
-
-<option>19:00</option>
-
-</select>
-
-<div class="buttons">
-
-<button onclick="confirmBooking()">
-
-✅ Подтвердить
-
-</button>
-
-<button onclick="closeBooking()">
-
-❌ Отмена
-
-</button>
+    </div>
 
 </div>
 
-</div>
-
-</div>
-
+<script src="booking.js"></script>
 <script src="script.js"></script>
 
 <div id="successModal" class="success-modal">

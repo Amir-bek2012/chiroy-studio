@@ -98,33 +98,50 @@ function closeBooking() {
 // Подтвердить запись
 // =========================
 
-function bookMaster(master){
+function confirmBooking() {
 
-    const date=document.getElementById("date").value;
-    const time=document.getElementById("time").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    if (date === "") {
+        Telegram.WebApp.showAlert("Выберите дату");
+        return;
+    }
+
+    if (time === "") {
+        Telegram.WebApp.showAlert("Выберите время");
+        return;
+    }
 
     Telegram.WebApp.sendData(JSON.stringify({
 
-        action:"booking",
-        master:master,
-        date:date,
-        time:time
+        action: "booking",
+
+        master: selectedMaster,
+
+        date: date,
+
+        time: time
 
     }));
 
-    document.getElementById("successText").innerHTML=
-        "<b>Мастер:</b> "+master+
-        "<br><br><b>Дата:</b> "+date+
-        "<br><b>Время:</b> "+time+
+    document.getElementById("successText").innerHTML =
+        "<b>Мастер:</b> " + selectedMaster +
+        "<br><br><b>Дата:</b> " + date +
+        "<br><b>Время:</b> " + time +
         "<br><br>Мы будем ждать вас ❤️";
 
-    document.getElementById("successModal").style.display="flex";
+    document.getElementById("successModal").style.display = "flex";
+
+    closeBooking();
 
 }
 
 function closeSuccess(){
 
     document.getElementById("successModal").style.display="none";
+
+    Telegram.WebApp.close();
 
 }
 
